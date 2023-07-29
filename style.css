@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap');
+
+:root {
+    --purple: hsl(278, 65%, 48%);
+    --l-pink: hsl(337, 100%, 65%);
+    --h-pink: #FFAFCC;
+    --l-blue: #BDE0FE;
+    --blue: hsl(249, 100%, 65%);
+    --green: hsl(173, 58%, 10%);
+    --yellow: hsl(60, 58%, 80%);
+    --black: #000;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+    font-size: 20px;
+    color: var(--black);
+    overflow: hidden;
+}
+
+/*
+TOP SECTION
+*/
+
+.top-section {
+    background-color: var(--white);
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.item {
+    background-color: inherit;
+    font-size: 1.5rem;
+}
+
+.item:hover {
+    color: var(--purple);
+    cursor: pointer;
+}
+
+a {
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/*
+ACTUAL CONTENT
+*/
+
+.content {
+    height: calc(100vmin - 7rem - 1.2rem);
+    margin: 0.6rem;
+    display: flex;
+}
+
+.content-left {
+    background-color: var(--blue);
+    width: calc(100vw/2);
+    margin-right: 0.3rem;
+    padding: 3rem;
+    color: var(--yellow);
+
+}
+
+.content-right {
+    background-color: var(--h-pink);
+    width: calc(100vw/2);
+    margin-left: 0.3rem;
+    padding: 3rem;
+    color: var(--green);
+}
+
+.text-content {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
+
+/*
+MOBILE
+*/
+
+@media (max-width:950px) {
+    .content {
+        height: calc(100svh - 7rem);
+        margin: 0.6rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .content-left {
+        background-color: var(--blue);
+        width: calc(100% - 1.12rem);
+        height: calc((100svh - 7rem)/2);
+        margin-right: 0.6rem;
+        margin-left: 0;
+        margin-bottom: 0.3rem;
+        padding: 1rem;
+        color: var(--yellow);
+    }
+    
+    .content-right {
+        background-color: var(--h-pink);
+        width: calc(100% - 1rem);
+        height: calc((100svh - 7rem)/2);
+        margin-right: 0.6rem;
+        margin-left: 0;
+        margin-top: 0.3rem;
+        padding: 1rem;
+        color: var(--green);
+    }
+
+    .text-content {
+        font-family: 'Oswald', sans-serif;
+        line-break: loose;
+        font-size: 1.2rem;
+    }
+}
+
+/*
+BOTTOM SECTION
+*/
+
+.bottom-section {
+    background-color: var(--white);
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.item-bottom {
+    background-color: inherit;
+    font-size: 1.5rem;
+}
